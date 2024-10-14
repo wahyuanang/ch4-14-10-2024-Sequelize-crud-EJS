@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <table>
+    <table style="border: 1px;">
         <th>name</th>
         <th>photo profile</th>
         <th>age</th>
@@ -24,7 +24,7 @@
                 <td>
                     <%= user.phoneNumber %>
                 </td>
-                <!-- <td><img src="<%= user.photoProfile %>"></td> -->
+                <td><img src="<%= user.photoProfile %>"></td>
             </tr>
             <% }) %>
     </table>

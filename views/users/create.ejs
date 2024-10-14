@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User</title>
 </head>
+
 <body>
     <h3>Create User</h3>
-    <form action="/dashboard/admin/users/create" method="POST">
-        <label for="">first name</label>
-        <input type="text" name="firstName" placeholder="masukkan nama" />
-        <br>
-        <label for="age">Masukan Umur</label>
-        <input type="number">
-        <br />
-        <button>Add Data</button>
+    <form action="/dashboard/admin/users/create" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Depan" required />
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Masukkan Nama Belakang" required />
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+        </div>
+        <div>
+            <label for="photoProfile">Photo Profile:</label>
+            <input type="file" id="photoProfile" name="photoProfile" required />
+        </div>
+        <div>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+        </div>
+        <div>
+            <button type="submit">Create User</button>
+        </div>
     </form>
 </body>
+
 </html>
