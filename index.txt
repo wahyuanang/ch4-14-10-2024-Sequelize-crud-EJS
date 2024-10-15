@@ -1,0 +1,27 @@
+Summary, 14 Oktober 2024 = 
+- config view engine dengan ejs
+- app.set view engine, utk set view engine yang kita pakai jd gk perlu index.ejs. langsung index bisa 
+- default pemanggilan view engine ke folder views
+- design pattern => MVC completed
+- config static file di node js express, salah satu fungsi nya agar bisa baca css utk view engine 
+- kita membuat get data dan config static file di node js express, salah satu fungsi nya agar bisa baca css utk view engine kita
+- res.render view engine kita utk get data page dan create data page
+- membuat function untuk create data untuk view engine kita dan memberi response res.redirect akhirnya
+- membaca options untuk dinamis data pada ejs kita <%= %>
+- menggunakan <% %> untuk javascript code pada ejs file kita
+
+Summary, 15 Oktober 2024 = 
+ - live coding EJS advance dengan = 
+1. install dynamic layout di express ejs kita : 
+npm install express-ejs-layouts 
+2. pada app.js kita import module/package nya dan set spt biasa. 
+3. buat file layout.ejs atau sesuai yang di define pada app.js kita 
+4. panggil bootstrap CDN di layout.ejs kita utk CSS dan JS 
+5. basic yang biasa pada layout.ejs = title html document, <%- body %>, header dan footer. 
+6. hapus struktur HTML pada file ejs yg sudah ada dan hanya isikan body html element nya saya, contoh pada index.ejs users 
+7. ambil tampilan sesuai kebutuhan pada template bootstrap 
+8. tampilkan di halaman customers untuk mudah di baca data yang sudah kita CRUD lah
+
+- upload file dari form, jangan lupa menggunakan attribute enctype="multipart/form-data" jika pada form ada input type file
+
+- memodifikasi tampilan dengan bootstrap pada view engine kita dengan express ejs layout
