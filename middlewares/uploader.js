@@ -1,18 +1,23 @@
 const multer = require("multer");
+const path = require("path");
+const express = require("express");
+const app = express();
 
-// multer filtering image
-const multerFiltering = (req, file, cb) => {
-  if (file.mimetype === "image/png" || file.mimetype === "image/jpeg") {
+const multerFilter = (req, file, cb) => {
+  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
     cb(null, true);
   } else {
-    console.log("ini tidak bisa");
-    throw new Error("image format must be png or jpg");
+    console.log("Invalid image file format type");
+    cb(new Error("Invalid image file format type"), false);
   }
 };
 
+const storage = multer.memoryStorage();
+
 const upload = multer({
-  fileFilter: multerFiltering,
-  dest: "public/images/users",
+  storage: storage,
+  fileFilter: multerFilter,
+  //   dest: "public/images/users",
 });
 
 module.exports = upload;
