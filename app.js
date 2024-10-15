@@ -1,5 +1,8 @@
+// module third party
 const morgan = require("morgan");
 const express = require("express");
+const expressEJSLayout = require("express-ejs-layouts");
+
 const usersRoute = require("./routes/usersRoute");
 const carsRoute = require("./routes/carsRoute");
 const sparepartsRoute = require("./routes/sparepartsRoute");
@@ -44,6 +47,9 @@ app.use(express.static(`${__dirname}/public`));
 
 // panggil view engine
 app.set("view engine", "ejs");
+// panggil expressejs layout
+app.use(expressEJSLayout);
+app.set("layout", "layout");
 
 app.get("/dashboard/admin/", async (req, res) => {
   try {

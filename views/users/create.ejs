@@ -1,39 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create User</title>
-</head>
-
-<body>
-    <h3>Create User</h3>
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Create User</h3>
     <form action="/dashboard/admin/users/create" method="POST" enctype="multipart/form-data">
-        <div>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Masukkan Nama Depan" required />
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Masukkan Nama Depan"
+                required />
         </div>
-        <div>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Masukkan Nama Belakang" required />
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Masukkan Nama Belakang"
+                required />
         </div>
-        <div>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required />
+        <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" required />
         </div>
-        <div>
-            <label for="photoProfile">Photo Profile:</label>
-            <input type="file" id="photoProfile" name="photoProfile" required />
+        <div class="mb-3">
+            <label for="photoProfile" class="form-label">Photo Profile:</label>
+            <input type="file" class="form-control" id="photoProfile" name="photoProfile" required />
         </div>
-        <div>
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number:</label>
+            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                placeholder="Masukkan Nomor Telepon" required />
         </div>
-        <div>
-            <button type="submit">Create User</button>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Create User</button>
         </div>
     </form>
-</body>
-
-</html>
+</div>

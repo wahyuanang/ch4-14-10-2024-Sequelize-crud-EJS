@@ -21,6 +21,7 @@ async function userPage(req, res) {
     const users = await User.findAll();
     console.log(users.data);
     res.render("users/index", {
+      title: "User Page",
       users,
     });
   } catch (error) {
@@ -43,7 +44,9 @@ async function createUser(req, res) {
 
 async function createPage(req, res) {
   try {
-    res.render("users/create");
+    res.render("users/create", {
+      title: "create Page",
+    });
   } catch (error) {
     res.render("error", {
       message: error.message,
